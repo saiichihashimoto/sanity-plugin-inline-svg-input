@@ -10,15 +10,15 @@ export interface InlineSvgInputConfig {}
  *
  * ```ts
  * import {defineConfig} from '@sanity-typed/types'
- * import {inlineSvgInput} from '@focus-reactive/sanity-plugin-inline-svg-input'
+ * import {inlineSvgInputTyped} from '@focus-reactive/sanity-plugin-inline-svg-input'
  *
  * export default defineConfig({
  *   // ...
- *   plugins: [inlineSvgInput()],
+ *   plugins: [inlineSvgInputTyped()],
  * })
  * ```
  */
-export const inlineSvgInputTyped = definePlugin((config: InlineSvgInputConfig | void) => {
+const inlineSvgInputTyped = definePlugin((config: InlineSvgInputConfig | void) => {
   return {
     name: 'sanity-plugin-inline-svg-input',
     schema: {
@@ -40,6 +40,6 @@ export const inlineSvgInputTyped = definePlugin((config: InlineSvgInputConfig | 
  * })
  * ```
  */
-export const inlineSvgInput = castFromTyped(inlineSvgInputTyped)
+const inlineSvgInput = castFromTyped(inlineSvgInputTyped)
 
-export { InlineSvgPreviewComponent, InlineSvgPreviewItem }
+export { inlineSvgInput, inlineSvgInputTyped, InlineSvgPreviewComponent, InlineSvgPreviewItem }
