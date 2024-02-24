@@ -6,6 +6,7 @@
 - Safe SVG sanitization with [dompurify](https://github.com/cure53/DOMPurify)
 - [SVG preview in arrays](#within-arrays)
 - [Customizable preview component](#custom-preview-component)
+- Support for [sanity-typed](https://github.com/saiichihashimoto/sanity-typed)
 
 ![preview](https://raw.githubusercontent.com/focusreactive/sanity-plugin-inline-svg-input/main/docs/preview.gif)
 
@@ -55,10 +56,13 @@ export default defineConfig({
 
 That's it! Now you can use this field to upload SVG images and see the preview in your Sanity Studio.
 
+---
+
 If you use [`@sanity-typed`](https://github.com/saiichihashimoto/sanity-typed/tree/main/packages/types#sanity-typedtypes), import `inlineSvgInputTyped` instead to get the correct types in your documents:
 
 ```js
-import { inlineSvgInputTyped } from 'sanity-plugin-country-state-select'
+import { defineType } from '@sanity-typed/types'
+import { inlineSvgInputTyped } from '@focus-reactive/sanity-plugin-inline-svg-input'
 
 export default defineConfig({
   // ...
